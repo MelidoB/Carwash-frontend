@@ -20,7 +20,6 @@ function HomePage() {
                 <h2>Services</h2>
                 <CategoryList />
             </div>
-            <InfoSection />
             <Footer />
         </div>
     );
