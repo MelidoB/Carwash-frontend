@@ -1,46 +1,52 @@
 import React from 'react';
 import '../static/css/CategoryList.css';
-import image from '../static/images/screen.png';
-import image2 from '../static/images/battery.png';
-import image3 from '../static/images/water_damage.png';
+import image1 from '../static/images/dealers/1.png';
+import image2 from '../static/images/dealers/2.webp'
+import image3 from '../static/images/dealers/3.jpg'
+import image4 from '../static/images/dealers/4.jpg'
+import image5 from '../static/images/dealers/5.jpg'
+import image6 from '../static/images/dealers/6.jpg'
+import image7 from '../static/images/dealers/7.jpg'
+import image8 from '../static/images/dealers/8.jpg'
+
 
 import { Link } from 'react-router-dom';
 
 function CategoryList() {
   const categories = [
     { 
-      name: 'Screen Replacement', 
-      icon: image,  
+      name: 'RapidLux Detailing', 
+      icon: image1,  
       linkName: '/repairservice'
     },
     { name: 
-      'Battery Replacement', 
+      'The Wash Club', 
       icon: image2,
       linkName: '/repairservice'
     },
-    { name: 'Water Damage Repair',
+    { name: 'USA Car Wash',
      icon: image3,
      linkName: '/repairservice'
     },
     { 
-      name: 'Software Troubleshooting', 
-      icon: '/path-to-icons/software-troubleshooting.svg',
+      name: 'Tinker Auto Detailing', 
+      icon: image4,
       linkName: '/repairservice'
     },
-    { name: 'Hardware Upgrades', 
-    icon: '/path-to-icons/hardware-upgrades.svg',
+    { name: 'David’s Auto Repair', 
+    icon: image5,
     linkName: '/repairservice' 
   },
-    { name: 'Data Recovery', 
-    icon: '/path-to-icons/data-recovery.svg',
+    { name: 'Sean’s Auto Spa', 
+    icon: image6,
     linkName: '/repairservice'
   },
-    { name: 'Charging Port Repair', 
-    icon: '/path-to-icons/charging-port-repair.svg',
+    { name: 'Ultimate Car Wash', 
+    icon: image7,
     linkName: '/repairservice'
   },
-    { name: 'Camera Repair', 
-    icon: '/path-to-icons/camera-repair.svg',
+    { name: 'Dash Mobile Detailing', 
+    icon: image8,
     linkName: '/repairservice' 
   },
     ];
@@ -48,10 +54,12 @@ function CategoryList() {
   return (
     <div className="category-list">
       {categories.map((category, index) => (
-        <div key={index} className="category">
-          <Link to={category.linkName} className=''> 
-          <img src={category.icon} alt={`${category.name} Icon`} />
-          <span>{category.name}</span>
+        <div key={index} className="card" style={{width: "18rem"}}>
+          <Link to={category.linkName}> 
+            <img src={category.icon} className="card-img-top" alt={`${category.name} Icon`} />
+            <div className="card-body">
+              <p className="card-text">{category.name}</p>
+            </div>
           </Link>
         </div>
       ))}
