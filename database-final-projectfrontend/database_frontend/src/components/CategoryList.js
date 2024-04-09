@@ -48,6 +48,7 @@ function CategoryList() {
     { name: 'Dash Mobile Detailing', 
     icon: image8,
     linkName: '/repairservice' 
+    
   },
     ];
 
@@ -61,9 +62,16 @@ function CategoryList() {
               <p className="card-text">{category.name}</p>
             </div>
           </Link>
+          
         </div>
+        
       ))}
+      
+      <a href="/PopularDealers" class="btn btn-primary btn-lg " tabindex="-1" role="button" aria-disabled="true">View more</a>
+        
+
     </div>
+    
   );
 }
 
