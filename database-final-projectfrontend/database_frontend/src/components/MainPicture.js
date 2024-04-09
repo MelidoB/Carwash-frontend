@@ -1,6 +1,6 @@
 import React from 'react';
-import background_1 from '../static/images/background_1.jpg';
-import background_2 from '../static/images/background_2.jpeg';
+import background_1 from '../static/images/background_1.jpeg';
+import background_2 from '../static/images/background_2.jpg';
 import background_3 from '../static/images/background_3.jpg';
 import SearchBar from './SearchBar';
 
