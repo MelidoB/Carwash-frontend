@@ -11,6 +11,7 @@ import RepairService from './components/RepairService';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.min.js'
 
+import IndividualCompanyPage from './components/companyTemplate';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/signup" component={SignUp} />
         <Route path="/dashboard" component={UserDashboard} />
         <Route path='/repairservice' component={RepairService}/>
-
+        <Route path='/company/:companyName' component={IndividualCompanyPage}/>
 
       </Switch>
     </Router>
