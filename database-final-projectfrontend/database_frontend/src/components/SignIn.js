@@ -1,38 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
-
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import '../static/css/SignIn.css'; // Import the CSS file for styling
 
 function SignIn() {
     return (
-        
-        <form>
-            <div><h2>Sign In</h2></div>
-            {/* Username */}
-            <div class="col-auto">
-                <label class="sr-only" for="inlineFormInputGroup">Username</label>
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">@</div>
-                    </div>
-                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username" />
+        <div>
+        <Header />
+        <div className="signin-container">
+           
+            <form className="signin-form">
+                <h2>Sign In</h2>
+                {/* Username */}
+                <div className="form-group">
+                    <label htmlFor="username">Username</label>
+                    <input type="text" className="form-control" id="username" placeholder="Username" />
                 </div>
-            </div>
 
-            {/* password */}
+                {/* Password */}
+                <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <input type="password" className="form-control" id="password" placeholder="Password" />
+                </div>
 
-            <div class="form-group">
-                <label for="inputPassword6">Password</label>
-                <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" />
-                <small id="passwordHelpInline" class="text-muted">
-                    Must be 8-20 characters long.
-                </small>
-            </div>
+                {/* Submit button */}
+                <button type="submit" className="btn btn-primary">Submit</button>
 
-            {/* Submit button */}
-            <button type="submit" class="btn btn-primary">Submit</button>
-
-            <a href="/signup">New user? Sign up</a>
-        </form>
+                {/* New user link */}
+                <a href="/signup">New user? Sign up</a>
+            </form>
+        </div>
+            <Footer />
+        </div>
     );
 }
 
